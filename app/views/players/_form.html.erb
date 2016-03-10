@@ -1,0 +1,19 @@
+<% if @player.errors.any? %>
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+<% end %>
+<p>
+<%= f.label :username, "User Name" %>
+<%= f.text_field :username %>
+</P>
+<p>
+<%= f.label :first_name, "First Name" %>
+<%= f.text_field :first_name %>
+</p>
+<p>
+<%= f.label :last_name, "Last Name" %>
+<%= f.text_field :last_name %>
+</p>
