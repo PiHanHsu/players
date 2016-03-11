@@ -28,15 +28,23 @@
 </div> 
 
 <div class="form-group form-inline">
+
 	<%= f.label :team, "Team" %><br>
 	<%= f.text_field :team, :class => "form-control",:placeholder => "Chicago Bulls" %>
+
 </div>
 
 <div class="form-group form-inline">
 	<%= f.label :position, "Position" %><br>
-	<%= f.text_field :position, :class => "form-control",:placeholder => "Guard" %>
+
+    <%= f.radio_button :position, "Center" %>
+	<%= f.label :position, "Center" %><br>
+	<%= f.radio_button :position, "Forward" %>
+	<%= f.label :position_forward, "Forward" %><br>
+	<%= f.radio_button :position, "Guard" %>
+	<%= f.label :position_guard, "Guard" %><br>
 	
-    </div>
+</div>
 
 <div class="form-group form-inline">
 	<%= f.label :experience, "Exp years" %><br>
