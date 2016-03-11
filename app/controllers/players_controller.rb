@@ -3,7 +3,8 @@ class PlayersController < ApplicationController
     before_action :set_player, :only => [:show, :edit, :update, :destroy]
 
 	def index
-        @all_players = Player.page(params[:page]).per(5)
+
+        @all_players = Player.page(params[:page]).per(5).order(id: :asc)
 	end
 
     def new
