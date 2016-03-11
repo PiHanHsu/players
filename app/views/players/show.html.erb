@@ -1,5 +1,10 @@
-<h1> <%= @player.username %> </h1>
-<h2> <%= @player.first_name %> </h2>
-<h2> <%= @player.last_name %> </h2>
+<div class="container">
+<h2> <%= " # " + @player.number.to_s + " " +@player.first_name + "  "  +@player.last_name %> </h2>
+<h3> <%=  @player.team %></h3>
+<h4> <%=  @player.position %></h4>
+<h4> <%=  "Exp Years: " + @player.experience.to_s %></h4>
+<p> <%=  @player.birthday.strftime("%Y-%m-%d") %></p>
 
 <p><%= link_to 'Back to index', players_path %></p>
+</div>
+
