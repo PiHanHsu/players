@@ -24,7 +24,7 @@
 
 <div class="form-group form-inline">
 	<%= f.label :birthday, "Birthday" %><br>
-	<%= f.text_field :birthday, :class => "form-control",:placeholder => "1990-01-01" %>
+	<%= f.date_select :birthday , :start_year => 1978 , :end_year => 2000 ,:class => "form-control" %>
 </div> 
 
 <div class="form-group form-inline">
