@@ -1,14 +1,20 @@
 <h1> Player List </h1>
 <table class = "table table-striped table-bordered ">
   <thead class = "thead">
-   <th>
-     <%= "User Name"%>
+    <th>
+      <%= "#"%>
     </th>
     <th>
        <%= "First Name"%>
     </th>
     <th>
        <%= "Last Name" %>
+    </td>
+    <th>
+       <%= "Team" %>
+    </td>
+    <th>
+       <%= "Position" %>
     </td>
     <th>
       <%= "Action"%>
@@ -18,7 +24,7 @@
     <% @all_players.each do |player| %>
   <tr>
     <td>
-     <%= player.username %>
+       <%= player.number %>
     </td>
     <td>
        <%= player.first_name %>
@@ -26,6 +32,13 @@
     <td>
        <%= player.last_name %>
     </td>
+     <td>
+       <%= player.team %>
+    </td>
+     <td>
+       <%= player.position %>
+    </td>
+
     <td>
       <%= link_to 'Show', player_path(player), :class => "btn btn-primary" %>
       <%= link_to 'Edit', edit_player_path(player), :class => "btn btn-default" %>

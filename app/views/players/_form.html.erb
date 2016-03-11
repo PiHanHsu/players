@@ -5,15 +5,41 @@
       <% end %>
       </ul>
 <% end %>
-<div class="form-group">
-	<%= f.label :username, "User Name" %>
-	<%= f.text_field :username, :class => "form-control" %>
+
+<h1> </h1>
+<div class="form-group form-inline">
+	<%= f.label :first_name, "First Name" %><br>
+	<%= f.text_field :first_name, :class => "form-control", :placeholder => "Input First Name" %>
 </div>
-<div class="form-group">
-	<%= f.label :first_name, "First Name" %>
-	<%= f.text_field :first_name, :class => "form-control" %>
+
+<div class="form-group form-inline">
+	<%= f.label :last_name, "Last Name" %><br>
+	<%= f.text_field :last_name, :class => "form-control", :placeholder => "Input Last Name" %>
 </div>
-<div class="form-group">
-	<%= f.label :last_name, "Last Name" %>
-	<%= f.text_field :last_name, :class => "form-control" %>
+
+<div class="form-group form-inline">
+	<%= f.label :number, "Jersey Number" %><br>
+	<%= f.text_field :number, :class => "form-control", :placeholder => "# Number" %>
+</div> 
+
+<div class="form-group form-inline">
+	<%= f.label :birthday, "Birthday" %><br>
+	<%= f.text_field :birthday, :class => "form-control",:placeholder => "1990-01-01" %>
+</div> 
+
+<div class="form-group form-inline">
+	<%= f.label :team, "Team" %><br>
+	<%= f.text_field :team, :class => "form-control",:placeholder => "Chicago Bulls" %>
 </div>
+
+<div class="form-group form-inline">
+	<%= f.label :position, "Position" %><br>
+	<%= f.text_field :position, :class => "form-control",:placeholder => "Guard" %>
+	
+    </div>
+
+<div class="form-group form-inline">
+	<%= f.label :experience, "Exp years" %><br>
+	<%= f.text_field :experience, :class => "form-control",:placeholder => "10" %>
+</div>
+

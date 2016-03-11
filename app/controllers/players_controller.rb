@@ -56,7 +56,7 @@ private
   end
 
   def player_params
-  	params.require(:player).permit(:username, :first_name, :last_name)
+  	params.require(:player).permit(:username, :first_name, :last_name, :team, :number, :position, :birthday, :experience)
   end
 
 end
