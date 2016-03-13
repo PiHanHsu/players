@@ -18,7 +18,11 @@ class PlayersController < ApplicationController
 
 		if @player.save
 		flash[:notice] = "新增成功！！"
-		redirect_to players_path
+		last_page = Player.all.count / 5
+		if Player.all.count % 5 != 0
+			last_page += 1
+		end
+		redirect_to players_path(:page => last_page)
 	    else
         render :action => :new
 	    end
@@ -33,6 +37,7 @@ class PlayersController < ApplicationController
 		
 		if @player.update(player_params)
 			flash[:notice] = "更新成功！！"
+
 			redirect_to players_path
 	    else
 	    	render :action => :edit
