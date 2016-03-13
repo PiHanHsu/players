@@ -48,11 +48,9 @@ class PlayersController < ApplicationController
 		flash[:alert] = "刪除成功！"
 	    @player.destroy
 	    display_page = params[:page].to_i
-	    players_in_page = Player.page(params[:page]).count
-	    if players_in_page == 0 && display_page > 1
-	    	display_page  = display_page - 1
+	    if Player.page(params[:page]).per(5).count == 0
+	    	display_page  -= 1
 	    end
-
 	    redirect_to players_path(:page => display_page)
 	end
 
