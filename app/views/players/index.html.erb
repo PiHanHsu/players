@@ -50,7 +50,7 @@
     <td>
       <%= link_to 'Show', player_path(player), :class => "btn btn-primary" %>
       <%= link_to 'Edit', edit_player_path(player), :class => "btn btn-default" %>
-      <%= link_to 'Delete', player_path(player), :method => :delete, :class => "btn btn-danger" %>
+      <%= link_to 'Delete', player_path(player, page: params[:page]) ,:method => :delete, :class => "btn btn-danger" %>
     </td>
    </tr>
   <% end %>
@@ -64,3 +64,5 @@
 <div >
 <%= paginate @all_players %>
 </div>
+
+

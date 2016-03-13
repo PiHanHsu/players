@@ -36,6 +36,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
+# for debug
+gem 'pry'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

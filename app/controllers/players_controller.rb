@@ -3,7 +3,6 @@ class PlayersController < ApplicationController
     before_action :set_player, :only => [:show, :edit, :update, :destroy]
 
 	def index
-
         @all_players = Player.page(params[:page]).per(5).order(id: :asc)
 	end
 
@@ -43,7 +42,10 @@ class PlayersController < ApplicationController
 	def destroy
 		flash[:alert] = "刪除成功！"
 	    @player.destroy
-	    redirect_to players_path
+        # binging.pry
+	    # redirect_to controller: 'players', action: 'index', page: @current_page
+	    binding.pry
+	    redirect_to players_path(:page => params[:page])
 	end
 
 
