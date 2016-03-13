@@ -42,9 +42,6 @@ class PlayersController < ApplicationController
 	def destroy
 		flash[:alert] = "刪除成功！"
 	    @player.destroy
-        # binging.pry
-	    # redirect_to controller: 'players', action: 'index', page: @current_page
-	    binding.pry
 	    redirect_to players_path(:page => params[:page])
 	end
 
